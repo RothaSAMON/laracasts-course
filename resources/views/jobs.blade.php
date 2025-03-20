@@ -30,6 +30,10 @@
               <p class="text-gray-500 mt-2">Pays {{ $job['salary'] }} per year.</p>
           </div>
       @endforeach
-  </div>
+
+    </div>
+    <div class="my-6">
+      {{ $jobs->links() }}
+    </div>
 </x-layout>
 
