@@ -22,6 +22,12 @@
                 <div class="flex items-center rounded-md border border-gray-200 bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                   <input type="text" name="title" id="title" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="Job title ...">
                 </div>
+
+                @error('title')
+                <div class="mt-2 bg-red-50 p-4 rounded-md">
+                  <p class="text-red-600">{{ $message }}</p>
+                </div>
+                @enderror
               </div>
             </div>
     
@@ -31,9 +37,25 @@
                 <div class="flex items-center rounded-md border border-gray-200 bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                   <input type="text" name="salary" id="salary" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="$XX,XXX">
                 </div>
+
+                @error('salary')
+                <div class="mt-2 bg-red-50 p-4 rounded-md">
+                  <p class="text-red-600">{{ $message }}</p>
+                </div>
+                @enderror
               </div>
             </div>
           </div>
+
+          {{-- @if ($errors->any())
+          <div class="mt-6 bg-red-50 p-4 rounded-md">
+            <ul>
+              @foreach (@$errors->all() as $error )
+                <li class="text-red-600">{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif --}}
         </div>
       </div>
     
