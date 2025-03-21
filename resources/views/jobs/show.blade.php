@@ -1,3 +1,4 @@
+{{-- Show : Job which is the specfic one job --}}
 <x-layout>
   <x-slot:heading>
     Job
